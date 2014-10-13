@@ -19,9 +19,11 @@
   </head>
   <body>
     <ul>
-      
-        <li><!-- user --></li>
-      
+      <!-- Actividad -->
+      {% for user in users %}
+        <li>{{user}}</li>
+      {% endfor %}
+      <!-- End Actividad -->
     </ul>
   </body>
 </html>

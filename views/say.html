@@ -18,6 +18,10 @@
 
   </head>
   <body>
-    
+    {% if name %}
+      <h2>Hello {{name}}!</h2>
+    {% else %}
+      <h2>Hello you!</h2>
+    {% endif %}
   </body>
 </html>
