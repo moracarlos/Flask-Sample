@@ -5,7 +5,7 @@ Se asume que estan en un sistema operativo Debian-like (Debian, Ubuntu, Mint, et
 
 Y que son usuarios root.
 
-1)
+**1)**
 Lo primero y ciertamente una de las cosas mas importantes es revisar el archivo
 (/etc/apt/sources.list) donde estan las fuentes de todos los repositorios del
 sistema operativo si estan en un Debian 7 "Wheezy" ese archivo deberia tener algo 
@@ -22,12 +22,12 @@ deb http://security.debian.org/ wheezy/updates main
 deb-src http://security.debian.org/ wheezy/updates main
 ```
 
-2)
+**2)**
 Actualizar la lista de repositorios con:
 
 `aptitude update`
 
-3)
+**3)**
 Lo siguiente es instalar las cosas necesarias para el proyecto, que son basicamente
 python, flask, psycopg2 y postgres. Para eso:
 
@@ -40,12 +40,12 @@ Las dos siguientes instalan un servidor de postgres y un cliente para conectarno
 
 La ultima instala unas dependencias necesarias para el psycopg2.
 
-4)
+**4)**
 Instalamos flask y psycopg2:
 
 `pip install flask psycopg2`
 
-5)
+**5)**
 Finalmente para configurar una base de datos en postgres, primero debemos cambiarnos
 al usuario postgres, conectarnos al servidor, crear la base de datos, crear un usuario
 con permisos sobre esa base de datos y despues podemos conectarnos con ese usuario y
@@ -63,4 +63,4 @@ psql -U ati -W -d ati_database -h localhost
 ```
 
 
-EXITO!
+**EXITO!**
