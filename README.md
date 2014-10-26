@@ -6,7 +6,7 @@ Se asume que estan en un sistema operativo Debian-like (Debian, Ubuntu, Mint, et
 Y que son usuarios root.
 
 **1)**
-Lo primero y ciertamente una de las cosas mas importantes es revisar el archivo (/etc/apt/sources.list) donde estan las fuentes de todos los repositorios del sistema operativo si estan en un Debian 7 "Wheezy" ese archivo deberia tener algo como esto:
+Lo primero y ciertamente una de las cosas mas importantes es revisar el archivo (/etc/apt/sources.list) donde estan las fuentes de todos los repositorios del sistema operativo, si estan en un Debian 7 "Wheezy" ese archivo deberia tener algo como esto:
 
 ```
 deb http://http.debian.net/debian wheezy main
