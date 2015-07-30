@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta chartset="utf-8">
+		<meta name="viewport">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Springfield`s War</title>
+
+		<!--[DEFINICIÓN DEL CSS]-->
+			<link rel="stylesheet" type="text/css" media="screen" href="../statics/css/bootstrap.css" /> 
+		    <link rel="stylesheet" type="text/css" media="screen" href="../statics/css/styles.css" />  
+	    <!--[/DEFINICIÓN DEL CSS]-->
+	</head>
+	<body>
+		<!--CONTENT-->
+		<form action="/logout" method="get">
+			<input id="logout" class="btn btn-primary btn-lg" role="button" type="submit" style="float:right" value="Cerrar sesion"></a>
+		</form>
+		<div class="panel panel-primary " style="margin-top:10px;margin-left:10%;margin-right:20%;">
+			<div class="panel-heading">
+	        	<h1 class="panel-title">Springfield's War</h1>
+	      	</div>
+	      	
+	      	<div class="panel-primario"> </div>
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-sm-4"></div>
+				<div class="col-lg-6 col-md-4 col-sm-4 btns_margin">
+  					<p class="btn-login"><a class="btn btn-primary btn-lg" role="button" href="/iniciar_sesion">Iniciar sesion</a></p>
+  					<p class="btn-register"><a class="btn btn-primary btn-lg" role="button" href="/registrarse">Registrarse</a></p>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-4"></div>
+			</div>
+
+			<div class="row margin">
+				<div class="col-lg-2 col-md-2 col-sm-1"></div>
+				<div class="col-lg-8 col-md-8 col-sm-10">
+	  				<center>
+						<div class="panel panel-default">
+	      				<!-- Default panel contents -->
+							<div class="panel-heading">Top 100</div>
+	      					<!-- Table -->
+	      					<table class="table">
+	        					<thead>
+	          						<tr>
+	            						<th>#</th>
+							            <th>Nombre de usuario</th>
+							            <th>Puntuacion</th>
+							        </tr>
+	        					</thead>
+	        				<tbody class="tabla">
+					       </tbody>
+					    </table>
+						</div>				
+					</center>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-1"></div>
+			</div>
+		</div>
+
+			
+
+		<!--[DEFINICIÓN DEL JS]-->
+		<script src="../statics/js/jquery-1.9.1.min.js"></script>
+		<script src="../statics/js/bootstrap.min.js"></script>
+		<!--[/DEFINICIÓN DEL JS]-->
+
+		<script>
+		$(document).ready(function(){
+    		$.ajax({url:"/getScores",success:function(result){
+				result=jQuery.parseJSON(result);
+      			for (j=0; j<result.length; j++){
+      			result[j]=jQuery.parseJSON(result[j]);
+      			console.log(result[j]);
+      			$(".tabla").append('<tr><td>'+j+'</td><td>'+result[j].email+'</td> <td>'+result[j].puntuacion+'</td></tr>');
+      			}
+			}});
+		});
+		</script>
+
+	</body>
+</html>

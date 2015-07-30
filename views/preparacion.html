@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta chartset="utf-8">
+		<meta name="viewport">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Springfield`s War</title>
+
+		<!--[DEFINICIÓN DEL CSS]-->
+			<link rel="stylesheet" type="text/css" media="screen" href="../statics/css/bootstrap.css" /> 
+		    <link rel="stylesheet" type="text/css" media="screen" href="../statics/css/styles.css" />  
+            <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script src="../statics/js/index.js"> </script>
+            <!--<script src="../statics/js/indexpedro.js"> </script>-->
+                <!--[/DEFINICIÓN DEL CSS]-->
+
+	</head>
+	<body>
+		<!--CONTENT-->
+        <form action="/logout" method="get">
+            <input id="logout" class="btn btn-primary btn-lg" role="button" type="submit" style="float:right" value="Cerrar sesion"></a>
+        </form>
+    <div class="oponentes-cont">
+        <div><img class="img-bart" src="../statics/images/bart-simpson.gif"></div>  
+        <div class="panel panel-default panel_principal">
+            <div class="panel-heading">Selecciona tu Oponente</div>
+            <div class="panel-body">
+                <div class="container puntuaciones">
+                    <div class="row">
+                        <div class="list-group">
+                         
+                                <a href="#" class="list-group-item disabled" style="height: 40px;">
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">#</div>
+                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-4">Oponente</div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">Puntuacion</div>
+                                </a>
+                        </div>
+                    </div>
+                 </div>
+
+                 <button type="button" class="btn btn-default navbar-btn">Preparar Unidades</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="unidades-cont">
+        <div class="panel panel-default panel_preparar">
+            <div class="panel-heading">Selecciona tus unidades</div>
+            <div class="panel-body">
+                <div class="container unidades">
+                    <div class="bs-example ">
+                        <div class="row">
+                            <div class="unidad-click col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="holder.js/100%x180" alt="100%x180" src="../statics/images/uni_1.jpg">
+                                </a>Cantidad Disponible: <p class="uni_1">{{uni_1}}</p>
+                            </div>
+                            <div class="unidad-click col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="holder.js/100%x180" alt="100%x180" src="../statics/images/uni_2.jpg">
+                                </a>Cantidad Disponible:<p class="uni_2">{{uni_2}}</p>
+                            </div>
+                            <div class="unidad-click col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="holder.js/100%x180" alt="100%x180" src="../statics/images/uni_3.jpg">
+                                </a>Cantidad Disponible:<p class="uni_3">{{uni_3}}</p>
+                            </div>
+                            <div class="unidad-click col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="holder.js/100%x180" alt="100%x180" src="../statics/images/uni_4.jpg">
+                                </a>Cantidad Disponible:<p class="uni_4">{{uni_4}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cola-cont">
+        <div class="panel panel-default panel_preparar">
+            <div class="panel-heading">Unidades seleccionadas</div>
+            <div class="panel-body">
+                <div class="container unidades">
+                    
+                    <div class="bs-example ">
+                        <div class="row" id="add-unidad">
+                        </div>
+                    </div>          
+                                    
+                 </div>
+
+            </div>
+        </div> 
+    </div>
+
+    <div class="begin-comb">
+        <div class="row">
+                        <center><a class="btn btn-primary btn-lg ir-combate" role="button">Ir al combate</a></center>
+        </div>
+    </div>
+        <div class="selected-cont"></div>
+
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h2>Cantidad de unidades</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 foto-modal">
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 cant_select">
+                                <input class="form-control entrada" placeholder="Cantidad de unidades">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default boton-cerrar" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary boton-seleccionar" data-dismiss="modal">Seleccionar</button>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+			
+		<!--[DEFINICIÓN DEL JS]-->
+		<script src="../statics/js/bootstrap.min.js"></script>
+		<!--[/DEFINICIÓN DEL JS]-->
+
+        <script>
+            $(document).ready(function(){
+                $("a").index(
+                        [
+                            {
+                                ataque: 0,
+                                defensa: 0,
+                                carga: 0,
+                                tipo: 0,
+                                puntos: 0,
+                                costo: 0,
+                                nombre: "Homero",
+                                cantidad_seleccionada: 0,
+                                cantidad_disp:80
+                            },
+                            {
+                                ataque: 0,
+                                defensa: 0,
+                                carga: 0,
+                                tipo: 0,
+                                puntos: 0,
+                                costo: 0,
+                                nombre: "Lisa",
+                                cantidad_seleccionada: 0,
+                                cantidad_disp:100
+                            },
+                            {
+                                ataque: 0,
+                                defensa: 0,
+                                carga: 0,
+                                tipo: 0,
+                                puntos: 0,
+                                costo: 0,
+                                nombre: "Bart",
+                                cantidad_seleccionada: 0,
+                                cantidad_disp:150
+                            },
+                            {
+                                ataque: 0,
+                                defensa: 0,
+                                carga: 0,
+                                tipo: 0,
+                                puntos: 0,
+                                costo: 0,
+                                nombre: "Bob",
+                                cantidad_seleccionada: 0,
+                                cantidad_disp:50
+                            }
+                        ]
+                    );
+
+            });
+         </script>
+	</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta chartset="utf-8">
+		<meta name="viewport">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Springfield`s War</title>
+
+		<!--[DEFINICIÓN DEL CSS]-->
+			<link rel="stylesheet" type="text/css" media="screen" href="../statics/css/bootstrap.css" /> 
+		    <link rel="stylesheet" type="text/css" media="screen" href="../statics/css/styles.css" />  
+	    <!--[/DEFINICIÓN DEL CSS]-->
+	</head>
+	<body>
+		<!--CONTENT-->
+		
+        <div class="row">
+        	<div class="col-lg-2"></div>
+        	<div class="col-lg-8">
+	            <div class="panel panel-primary">
+	      			<div class="panel-heading">
+	        			<h1 class="panel-title">Recursos</h1>
+	      			</div>
+	      		<div class="panel-body">
+			      
+			     <div class="col-sm-6 col-md-4">
+			        <div class="thumbnail">
+			          <img src="../statics/images/rec_1.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Ladrillo</h3>
+			            <p>Material de edificaciones.</p>
+			            <h2>Nivel<p class="form-control margen block" id="linea-form">{{rec_ladrillo}}</p></h2>
+			          </div>
+			        </div>
+			      </div>
+
+			     <div class="col-sm-6 col-md-4">
+			        <div class="thumbnail">
+			          <img src="../statics/images/rec_2.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Rosquilla</h3>
+			            <p>Material de unidades</p>
+			            <h2>Nivel<p class="form-control margen block" id="linea-form">{{rec_rosquilla}}</p></h2>
+			          </div>
+			        </div>
+			      </div>
+
+			      <div class="col-sm-6 col-md-4">
+			        <div class="thumbnail">
+			          <img src="../statics/images/rec_3.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Energia nuclear</h3>
+			            <p>Material de energia</p>
+			            <h2>Nivel<p class="form-control margen block" id="linea-form">{{rec_energia}}</p></h2>
+			          </div>
+			        </div>
+			      </div>
+	      		</div>
+	    		</div>
+	    	</div>
+    		<div class="col-lg-2"></div>
+        </div>
+
+        <div class="row">
+        	<div class="col-lg-2"></div>
+        	<div class="col-lg-8">
+	            <div class="panel panel-primary">
+	      			<div class="panel-heading">
+	        			<h1 class="panel-title">Edificaciones</h1>
+	      			</div>
+	      		<div class="panel-body">
+				<div class="col-sm-6 col-md-4">
+			        <div class="thumbnail">
+			          <img src="../statics/images/edif_1.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Fabrica</h3>
+			            <p>Produce ladrillos.</p>
+			            <h2>Nivel <p class="form-control margen block edif_fab" id="linea-form">{{edif_fab}}</p></h2>
+			            
+			            <a class="btn btn-primary btn-md" role="button" id="subir_fab">Subir nivel +1</a>
+			          </div>
+			        </div>
+			      </div>
+
+			     <div class="col-sm-6 col-md-4">
+			        <div class="thumbnail">
+			          <img src="../statics/images/edif_2.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Kwik e-mart</h3>
+			            <p>Produce rosquillas</p>
+			            <h2>Nivel<p class="form-control margen block edif_kwik" id="linea-form">{{edif_kwik}}</p></h2>
+			            <a class="btn btn-primary btn-md" role="button" id="subir_kwik">Subir nivel +1</a>
+			          </div>
+			        </div>
+			      </div>
+
+			      <div class="col-sm-6 col-md-4">
+			        <div class="thumbnail">
+			          <img src="../statics/images/edif_3.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Planta nuclear</h3>
+			            <p>Produce energia nuclear</p>
+			            <h2>Nivel<p class="form-control margen block edif_planta" id="linea-form">{{edif_planta}}</p></h2>
+			            <a class="btn btn-primary btn-md" role="button" id="subir_planta">Subir nivel +1</a>
+			          </div>
+			        </div>
+			      </div>
+	      		</div>
+	    		</div>
+	    	</div>
+    		<div class="col-lg-2"></div>
+        </div>
+
+        <div class="row">
+        	<div class="col-lg-2"></div>
+        	<div class="col-lg-8">
+	            <div class="panel panel-primary">
+	      			<div class="panel-heading">
+	        			<h1 class="panel-title">Unidades</h1>
+	      			</div>
+	      	<div class="panel-body">
+				<div class="col-sm-6 col-md-3">
+			        <div class="thumbnail">
+			          <img src="../statics/images/uni_1.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Homero</h3>
+			            <p>Distancia</p>
+			            <h4>Cantidad<p class="form-control margen block uni_homero" id="linea-form2">{{uni_homero}}</p></h4>
+			           	<a class="btn btn-primary btn-md" role="button" id="comprar_homero">Comprar unidad</a>
+
+			          </div>
+			        </div>
+			      </div>
+
+			     <div class="col-sm-6 col-md-3">
+			        <div class="thumbnail">
+			          <img src="../statics/images/uni_2.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Lisa</h3>
+			            <p>Distancia</p>
+			            <h4>Cantidad<p class="form-control margen block uni_lisa" id="linea-form2">{{uni_lisa}}</p></h4>
+			           	<a class="btn btn-primary btn-md" role="button" id="comprar_lisa">Comprar unidad</a>
+
+			          </div>
+			        </div>
+			      </div>
+
+			      <div class="col-sm-6 col-md-3">
+			        <div class="thumbnail">
+			          <img src="../statics/images/uni_3.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Bart</h3>
+			            <p>Fisico</p>
+			            <h4>Cantidad<p class="form-control margen block uni_bart" id="linea-form2">{{uni_bart}}</p></h4>
+			            <a class="btn btn-primary btn-md" role="button" id="comprar_bart">Comprar unidad</a>
+			          </div>
+			        </div>
+			      </div>
+
+			      <div class="col-sm-6 col-md-3">
+			        <div class="thumbnail">
+			          <img src="../statics/images/uni_4.jpg" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+			          <div class="caption">
+			            <h3>Bob</h3>
+			            <p>Fisico</p>
+			            <h4>Cantidad<p class="form-control margen block uni_bob" id="linea-form2">{{uni_bob}}</p></h4>
+			            <a class="btn btn-primary btn-md" role="button" id="comprar_bob">Comprar unidad</a>
+			          </div>
+			        </div>
+			      </div>
+	      		</div>
+	    		</div>
+	    	</div>
+    		<div class="col-lg-2"></div>
+        </div>
+			
+		<!--[DEFINICIÓN DEL JS]-->
+		<script src="../statics/js/jquery-1.9.1.min.js"></script>
+		<script src="../statics/js/bootstrap.min.js"></script>
+		<!--[/DEFINICIÓN DEL JS]-->
+	</body>
+</html>
+
+<script>
+$(document).ready(function(){
+  $("#subir_fab").click(function(){
+    $.ajax({url:"/subir_fab",success:function(result){
+      $(".edif_fab").html(result);
+    }});
+  });
+  $("#subir_kwik").click(function(){
+    $.ajax({url:"/subir_kwik",success:function(result){
+      $(".edif_kwik").html(result);
+    }});
+  });
+  $("#subir_planta").click(function(){
+    $.ajax({url:"/subir_planta",success:function(result){
+      $(".edif_planta").html(result);
+    }});
+  });
+
+  $("#comprar_homero").click(function(){
+    $.ajax({url:"/comprar_homero",success:function(result){
+      $(".uni_homero").html(result);
+    }});
+  });
+
+  $("#comprar_lisa").click(function(){
+    $.ajax({url:"/comprar_lisa",success:function(result){
+      $(".uni_lisa").html(result);
+    }});
+  });
+  $("#comprar_bart").click(function(){
+    $.ajax({url:"/comprar_bart",success:function(result){
+      $(".uni_bart").html(result);
+    }});
+  });
+  $("#comprar_bob").click(function(){
+    $.ajax({url:"/comprar_bob",success:function(result){
+      $(".uni_bob").html(result);
+    }});
+  });
+});
+</script>
